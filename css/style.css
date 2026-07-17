@@ -1,0 +1,11 @@
+.card{
+    margin: 5%
+}
+.card-header-title{
+    margin-top:  5%;
+    margin-right: 5%;
+    width: 100%;
+    color: rgb(67, 14, 117);
+    background-color: rgb(225, 179, 255);
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}

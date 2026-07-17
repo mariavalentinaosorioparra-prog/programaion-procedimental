@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+
+ </head>
+ <body>
+    
+ <form class="box">
+
+  <div class="field">
+    <label class="label">Producto</label>
+    <div class="control">
+      <input class="input" id="nombreproducto" type="text" placeholder="Ingrese el producto" />
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label class="label">Direccion</label>
+    <div class="control">
+      <input class="input" id="direccion" type="text" placeholder="Ingrese su dirección" />
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label class="label">Nombre de usuario</label>
+    <div class="control">
+      <input class="input" id="nombreusuario" type="text" placeholder="Ingrese su nombre de usuario" />
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label class="label">Cantidad</label>
+    <div class="control">
+      <input class="input" id="cantidad" type="text" placeholder="Ingrese la cantidad" />
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label class="label">Metodo de pago</label>
+    <div class="control">
+      <input class="input" id="metodopago" type="text" placeholder="Ingrese su método de pago" />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Pago</label>
+    <div class="control">
+      <input class="input" id="pago" type="text" placeholder="Ingrese el monto del pago" />
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label class="label">Telefono</label>
+    <div class="control">
+      <input class="input" id="telefono" type="tel" placeholder="Ingrese su telefono"/>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <button class="button is-primary is-fullwidth">
+        Pedir
+      </button>
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="../js/pedido.js"></script>
+
+      <div class="has-text-centered my-5">
+  <a href="/inicio.html" class="button is-link is-rounded">
+    <span>Volver al inicio</span>
+  </a>
+</div>
+</form>
+ </body>
+ </html>
+ 
