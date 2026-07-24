@@ -13,6 +13,14 @@ function validarDatos() {
     const regexTexto = /^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/;
     const regexFecha = /^\d{4}-\d{2}-\d{2}$/;
 
+    if (!nombrepVal || !nombreuVal || !cantidadVal || !direccionVal || !metodoPagoVal || !pagoVal || !telefonoVal) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error en Campos Obligatorios',
+            text: 'Por favor, complete todos los campos.'
+        });
+        return false;
+    }
     // Validaciones
     if (!regexTexto.test(nombrepVal)) {
         Swal.fire({
@@ -83,3 +91,5 @@ function validarDatos() {
      
     return true;
 }
+
+document.getElementById("btnGuardar").onclick = validarDatos;

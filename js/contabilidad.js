@@ -4,13 +4,21 @@ function validarDatos() {
     const egresosVal = document.getElementById("egresos").value;
     const conceptoVal = document.getElementById("concepto").value;
     const fechaVal = document.getElementById("fecha").value;
+    
 
-    // Expresiones regulares
     const regexNumero = /^\d+$/;
     const regexTexto = /^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/;
     const regexFecha = /^\d{4}-\d{2}-\d{2}$/;
 
-    // Validaciones
+    if (!ingresosVal || !egresosVal || !conceptoVal || !fechaVal) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error en los Campos',
+            text: 'Por favor, complete todos los campos.'
+        });
+        return false;
+    }
+
     if (!regexNumero.test(ingresosVal)) {
         Swal.fire({
             icon: 'error',
@@ -47,7 +55,6 @@ function validarDatos() {
         return false;
     }
 
-    // Si todo está bien
     Swal.fire({
         icon: 'success',
         title: '¡Excelente!',
@@ -56,3 +63,4 @@ function validarDatos() {
      
     return true;
 }
+document.getElementById("btnGuardar").onclick = validarDatos;
